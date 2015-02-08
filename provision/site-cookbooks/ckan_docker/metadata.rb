@@ -1,6 +1,0 @@
-name             'ckan_docker'
-maintainer       'Takayuki Miyauchi'
-license          'MIT'
-description      'Installs/Configures CKAN with docker'
-long_description 'Installs/Configures CKAN with docker'
-version          '0.1.0'

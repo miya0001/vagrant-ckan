@@ -1,21 +1,31 @@
-# encoding: utf-8
-# vim: ft=ruby expandtab shiftwidth=2 tabstop=2
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
 
-Vagrant.configure(2) do |config|
+# Vagrantfile API/syntax version. Don't touch unless you know what you're doing!
+VAGRANTFILE_API_VERSION = "2"
 
-  config.vm.box = 'ubuntu/trusty64'
+Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
-  config.vm.network :private_network, ip: '192.168.55.55'
+  config.vm.box = "ubuntu/trusty64"
+  config.vm.network :private_network, ip: "192.168.55.10"
 
-  # config.vm.synced_folder 'www', '/var/www',
-  #       create: true, owner: "vagrant", group: "vagrant"
+  # config.vm.provider :aws do |aws, override|
+  #   override.vm.box = "dummy"
+  #   override.vm.box_url = "https://github.com/mitchellh/vagrant-aws/raw/master/dummy.box"
+  #
+  #   aws.access_key_id     = ENV['AWS_ACCESS_KEY']
+  #   aws.secret_access_key = ENV['AWS_SECRET_ACCESS_KEY']
+  #   aws.keypair_name      = ENV['AWS_EC2_KEYPAIR']
+  #
+  #   aws.region = "us-east-1"
+  #   aws.ami = "ami-35dbde5c" # Ubuntu13.10 64bit
+  #
+  #   aws.instance_type = "t1.micro"
+  #
+  #   override.ssh.username = "ubuntu"
+  #   override.ssh.private_key_path = ENV['AWS_EC2_KEYPAIR_PATH']
+  # end
 
-  config.vm.provision :chef_solo do |chef|
-    chef.cookbooks_path = [
-      File.join(File.dirname(__FILE__), 'provision/cookbooks'),
-      File.join(File.dirname(__FILE__), 'provision/site-cookbooks')
-    ]
-
-    chef.add_recipe "ckan_docker"
-  end
+  # config.ssh.pty = true
+  # config.vm.provision :shell, :path => "bootstrap.sh"
 end
