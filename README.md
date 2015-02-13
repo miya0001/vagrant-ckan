@@ -14,10 +14,8 @@ Then visit [http://192.168.55.10/](http://192.168.55.10/).
 
 You have to use CKAN’s command line interface to create your first sysadmin user.
 
-SSH into the instance with the user ‘ubuntu’.
-
 ```
-ssh -i /path/to/my-key-pair.pem ubuntu@${public_hostname}
+vagrant ssh
 ```
 
 CKAN commands are executed using the paster command on the server that CKAN is installed on. Before running the paster commands below, you need to make sure that your virtualenv is activated and that you're in your ckan source directory.

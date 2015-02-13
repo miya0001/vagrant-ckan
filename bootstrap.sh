@@ -70,7 +70,7 @@ if [ -f /etc/solr/conf/schema.xml ]; then
 fi
 
 if [ ! -L /etc/solr/conf/schema.xml ]; then
-    ln -s /usr/lib/ckan/default/src/ckan/ckan/config/solr/schema-2.3.xml /etc/solr/conf/schema.xml
+    ln -s /usr/lib/ckan/default/src/ckan/ckan/config/solr/schema.xml /etc/solr/conf/schema.xml
 fi
 
 sudo service jetty restart
