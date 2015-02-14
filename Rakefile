@@ -12,7 +12,7 @@ namespace :spec do
   end
 
   task :all     => targets
-  task :default => :all
+  # task :default => :all
 
   targets.each do |target|
     desc "Run serverspec tests to #{target}"
