@@ -1,4 +1,4 @@
-# Vagrant environment for CKAN 2.3b
+# Vagrant environment for CKAN
 
 ## Getting started
 

@@ -39,7 +39,7 @@ chown `whoami` /usr/lib/ckan/default
 virtualenv --no-site-packages /usr/lib/ckan/default
 . /usr/lib/ckan/default/bin/activate
 
-pip install -e 'git://github.com/ckan/ckan.git@release-v2.3#egg=ckan'
+pip install -e 'git://github.com/ckan/ckan.git@ckan-2.3#egg=ckan'
 pip install -r /usr/lib/ckan/default/src/ckan/requirements.txt
 deactivate
 . /usr/lib/ckan/default/bin/activate
